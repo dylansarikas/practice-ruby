@@ -7,5 +7,5 @@ puts globs
 p slobs
 
 store = [blobs, globs, slobs]
-#p store[0][price:]
 p store[0][:price]
+p store [0][:color]
