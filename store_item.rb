@@ -13,10 +13,10 @@
 class StoreFront
   attr_accessor :price, :smell, :color
 
-  def initialize(price_input, smell_input, color_input)
-    @price = price_input
-    @smell = smell_input
-    @color = color_input
+  def initialize(input_hash)
+    @price = input_hash[:price]
+    @smell = input_hash[:smell]
+    @color = input_hash[:color]
   end
 
   # def price
@@ -50,9 +50,9 @@ class StoreFront
 
 end
 
-blobs = StoreFront.new(13, "poor", "puke green")
-globs = StoreFront.new(12, "okay i guess", "can't really describe it")
-slobs = StoreFront.new(14, "wonderful", "pretty in pink")
+blobs = StoreFront.new price: 13, smell: "poor", color: "puke green"
+globs = StoreFront.new price: 12, smell: "okay i guess", color: "can't really describe it"
+slobs = StoreFront.new price: 14, smell: "wonderful", color: "pretty in pink" 
 blobs.print_out
 puts globs.price
 puts globs.smell
