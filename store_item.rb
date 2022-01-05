@@ -11,35 +11,37 @@
 # p store [0][:color]
 
 class StoreFront
+  attr_accessor :price, :smell, :color
+
   def initialize(price_input, smell_input, color_input)
     @price = price_input
     @smell = smell_input
     @color = color_input
   end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def smell
-    @smell
-  end
+  # def smell
+  #   @smell
+  # end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def price=(input)
-    @price = input
-  end
+  # def price=(input)
+  #   @price = input
+  # end
 
-  def smell=(input)
-    @smell = input
-  end
+  # def smell=(input)
+  #   @smell = input
+  # end
 
-  def color=(input)
-    @color = input
-  end
+  # def color=(input)
+  #   @color = input
+  # end
 
   def print_out
     puts "This costs #{price} schmackos, smells #{smell}, and looks like #{color}"
