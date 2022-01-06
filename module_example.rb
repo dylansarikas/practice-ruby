@@ -1,4 +1,5 @@
 module VehicleAttributes
+  attr_accessor :brake, :accelerate, :turn
   def initialize
     @speed = 0
     @direction = 'north'

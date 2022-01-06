@@ -1,6 +1,5 @@
-
-
-
+require "./storefront.rb"
+require "./food.rb"
 
 blobs = StoreFront.new price: 13, smell: "poor", color: "puke green"
 globs = StoreFront.new price: 12, smell: "okay i guess", color: "can't really describe it"
@@ -16,3 +15,4 @@ blobs.smell=("awfully poor")
 blobs.color=("noxious vomit green")
 blobs.print_out
 flobs.print_out
+blobs.is_edible
