@@ -64,12 +64,28 @@ class Vehicle
 end
 
 class Car < Vehicle
+  def initialize
+    super
+    @wheels = "On the bus go round and round"
+    @make = "Patty cake"
+    @fuel = "Pure vegetable oil"
+    @warranty = true
+  end
+  
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 class Bike < Vehicle
+  def initialize
+    super
+    @type = "zoomin"
+    @weight = "hefty hefty hefty"
+    @wheels = "two to tango"
+    @brakes = "cut"
+  end
+   
   def ring_bell
     puts "Ring ring!"
   end

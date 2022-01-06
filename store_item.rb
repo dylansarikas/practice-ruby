@@ -50,9 +50,23 @@ class StoreFront
 
 end
 
+class Food < StoreFront
+  def initialize(input_hash)
+    super
+    @shelf_life = -3
+  end
+
+  def print_out
+    super
+    puts "with a shelf life of #{@shelf_life} years"
+  end
+
+end
+
 blobs = StoreFront.new price: 13, smell: "poor", color: "puke green"
 globs = StoreFront.new price: 12, smell: "okay i guess", color: "can't really describe it"
-slobs = StoreFront.new price: 14, smell: "wonderful", color: "pretty in pink" 
+slobs = StoreFront.new price: 14, smell: "wonderful", color: "pretty in pink"
+flobs = Food.new price: 15, smell: "actually odorless", color: "strangely invisible" 
 blobs.print_out
 puts globs.price
 puts globs.smell
@@ -62,3 +76,4 @@ blobs.price=(1414)
 blobs.smell=("awfully poor")
 blobs.color=("noxious vomit green")
 blobs.print_out
+flobs.print_out
